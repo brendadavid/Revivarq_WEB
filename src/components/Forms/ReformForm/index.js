@@ -11,11 +11,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Input from '@material-ui/core/Input';
 import { Constants } from '../../../configs/constants'
-import { InputLabel, Checkbox, FormControlLabel, FormControl, FormGroup, FormLabel } from '@material-ui/core';
-import Icon from '@material-ui/core/Icon';
-import SaveIcon from '@material-ui/icons/Save';
+import { InputLabel, Checkbox, FormControlLabel, FormControl } from '@material-ui/core';
 import { postReform } from '../../../services/reforms/index.js';
 import { postPhotos } from '../../../services/photos/index.js';
 

@@ -1,9 +1,7 @@
 import React from 'react'
 import Page from 'views/Page';
 import './styles.css';
-import SimpleMenu from '../../components/DropdownMenu';
 import { validToken, logout } from 'services/auth'
-import {isAdmin} from '../../views/Page/index.js';
 import AreaAdminComponent from '../../components/AreaAdmin/index.js';
 
 class AreaAdmin extends Page {
