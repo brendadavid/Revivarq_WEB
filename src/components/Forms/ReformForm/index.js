@@ -287,7 +287,7 @@ class ReformForm extends React.Component {
 
 				<Grid item xs={3} direction="column" style={{display:"flex-end"}} className="reforma-form-inner-container">
 					<div className="reforma-form-inputs-container-top">
-						<InputLabel style={{ textAlign: 'center', fontSize: 16 }} htmlFor="demo-controlled-open-select">Informações Gerais</InputLabel>
+						<InputLabel style={{ textAlign: 'center', fontSize: 16, color: 'black'}} htmlFor="demo-controlled-open-select">Informações Gerais</InputLabel>
 
 						<Typography style={{ color: 'black', fontFamily: 'Playfair Display', margin: 0 }}>
 								<TextField
@@ -387,7 +387,7 @@ class ReformForm extends React.Component {
 								/>
 							</Typography>
 
-							<InputLabel style={{ textAlign: 'center', fontSize: 16, marginBottom: 10, marginTop: 50 }} htmlFor="demo-controlled-open-select">Informações de Endereço</InputLabel>
+							<InputLabel style={{ textAlign: 'center', fontSize: 16, marginBottom: 10, marginTop: 50, color:'black' }} htmlFor="demo-controlled-open-select">Informações de Endereço</InputLabel>
 							<Typography style={{ color: 'black', fontFamily: 'Playfair Display' }}>
 								<NumberFormat
 									customInput={TextField}
@@ -493,7 +493,7 @@ class ReformForm extends React.Component {
 							?
 							<Grid item xs={12} style={{marginRight:120}}>
 								<Button variant="contained" onClick={(e) => this.abreFotos(e)}
-									style={{ color: 'white', backgroundColor: "rgb(21,38,32)", fontSize: 15, display: 'flex-center', marginTop: 20 }}>
+									style={{ color: 'black', backgroundColor: "rgb(21,38,32)", fontSize: 15, display: 'flex-center', marginTop: 20 }}>
 									Fechar
 										</Button>
 								<Typography style={{ color: 'black', fontSize: 20, display: 'flex-center' }}>
@@ -506,7 +506,7 @@ class ReformForm extends React.Component {
 							<Grid item xs={12} style={{marginRight:120}}>
 
 								<Button variant="contained" onClick={(e) => this.abreFotos(e)}
-									style={{ color: 'white', backgroundColor: "rgb(21,38,32)", fontSize: 15, margin: 20, display: 'flex-center' }}>
+									style={{ color: 'yellow', backgroundColor: 'black', fontSize: 15, margin: 20, display: 'flex-center' }}>
 									Adicionar Fotos
 										</Button>
 							</Grid>
@@ -516,7 +516,7 @@ class ReformForm extends React.Component {
 								this.state.imagePreviewUrl.map((foto) => {
 									return <div>
 										<img src={foto.foto} style={{ width: 70, height: 70, display: 'flex-center', margin: 20 }}></img>
-										<Button variant="contained" style={{ color: 'white', backgroundColor: "rgb(21,38,32)", display: "flex-center", marginBottom: 80 }} onClick={(e) => this.deletarImg(foto)}>Remover</Button>
+										<Button variant="contained" style={{ color: 'black', backgroundColor: "rgb(21,38,32)", display: "flex-center", marginBottom: 80 }} onClick={(e) => this.deletarImg(foto)}>Remover</Button>
 									</div>
 								})
 							}
@@ -527,9 +527,9 @@ class ReformForm extends React.Component {
 				<Grid item xs={3} direction="column" className="reforma-form-radios-container">
 					<div>
 						<Grid item xs={12}>
-							<InputLabel style={{ margin: 20 }} htmlFor="demo-controlled-open-select">Itens da Reforma</InputLabel>
+							<InputLabel style={{ margin: 20, color:'black' }} htmlFor="demo-controlled-open-select">Itens da Reforma</InputLabel>
 						</Grid>
-						<FormControl  style={{margin:10}}component="fieldset" className="input">
+						<FormControl  style={{margin:10}} component="fieldset" className="input">
 							<FormControlLabel
 								checked={reformItens.fachada}
 								label="Fachada"
@@ -611,7 +611,7 @@ class ReformForm extends React.Component {
 
 					<Grid item xs={12}>
 						<Button onClick={() => this.handleClickOpen()}
-							variant="contained" style={{ color: 'white', backgroundColor: "rgb(21,38,32)", fontSize: 25, margin: 20 }} >
+							variant="contained" style={{ color: 'yellow', backgroundColor: 'black', fontSize: 25, margin: 20 }} >
 							Encaminhar
 								</Button>
 					</Grid>
