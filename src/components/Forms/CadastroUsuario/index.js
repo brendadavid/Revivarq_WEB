@@ -35,7 +35,11 @@ class CadastroUsuario extends React.Component {
 	}
 
 	validEmail(email){
-		return !!email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+		return !!email && /(a+)+$/.test(email)("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+                                                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+                                                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+                                                        "aaaaaaaaaaaaaaa!"
+                                                                          );
 	} 
 	validPassword(password) {
 		return (!!password && password.length >= 6 && password.length <= 11)
