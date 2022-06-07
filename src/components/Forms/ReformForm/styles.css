@@ -7,15 +7,15 @@
 .reforma-container h1 {
 border-top: 5px;
 border-bottom: 0px;
-text-shadow: 2px 3px rgba(0, 0, 0, 0.3);
+text-shadow: 2px 3px rgba(255, 255, 255, 0.3) !important;
 }
 
 .reforma-container .submitBtn {
 margin: 20px;
 min-width: 200px;
-background-color: rgba(0, 0, 0, 0.9); 
+background-color: rgba(255, 255, 255, 0.9) !important; 
 color: white;
-text-shadow: 1px 1px rgba(0, 0, 0, 0.623);
+text-shadow: 1px 1px rgba(255, 255, 255, 0.623) !important;
 }
 
 .reforma-container .input {
@@ -28,7 +28,7 @@ color: red
 }
 
 .reforma-container {
-background: rgb(255,248,41);
+background: black !important;
 width: 50%;
 height: 100%;
 margin: 1rem
