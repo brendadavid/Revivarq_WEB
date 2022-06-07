@@ -17,7 +17,6 @@ class Footer extends React.Component {
 		history.push(path)
 	}
     render(){
-        const { display } = this.props
         const {render} = this.state
        
             return(

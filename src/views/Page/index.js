@@ -75,7 +75,7 @@ class Page extends React.Component {
     unauthenticated = () => {
         return (
             <div className="container">
-                <p>Rota Protegida. <a onClick={() => this.redirect('/')} className="clickable">Afaste-se</a>!</p>
+                <p>Rota Protegida. <a href='/' className="clickable">Afaste-se</a>!</p>
             </div>
         )
     }
@@ -99,9 +99,6 @@ class Page extends React.Component {
     }
 
     footer = () => {
-        const pathname = this.props.history.location.pathname
-        const { footer } = getRouteConfigs(pathname)
-
         return (
             <Footer />
         )

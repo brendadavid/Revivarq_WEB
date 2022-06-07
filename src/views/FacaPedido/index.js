@@ -5,11 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import ReformForm from 'components/Forms/ReformForm'
 
 class FacaPedido extends Page {
-
-	constructor(props) {
-		super(props)
-	}
-
 	unauthenticated = () => {
 		return (
 			<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '40vh' }}>

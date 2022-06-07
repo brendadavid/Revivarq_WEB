@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import Table from '@material-ui/core/Table';
@@ -91,7 +91,6 @@ export default class AreaAdminComponent extends React.Component {
 	render() {
 		const { reforms, isLoading, openedReformIndex } = this.state;
 		const classes = styles();
-		let count = 0;
 		return (
 			<div>
 				<div style={{ display: 'flex', justifyContent: 'left', marginLeft: 60, marginBottom: -60, marginTop: 30 }}>

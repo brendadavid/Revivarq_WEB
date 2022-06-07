@@ -94,7 +94,7 @@ class Header extends React.Component {
 		this.renderHeaderButtons()
 		showNotification('Desconectado com sucesso!')
 		const { history } = this.props
-		if (history != '/')
+		if (history !== '/')
 			this.redirect('/')
 	}
 
@@ -158,13 +158,13 @@ class Header extends React.Component {
 	}
 
 	renderModalContent() {
-		if (this.state.modalState == this.modalScreen.login)
+		if (this.state.modalState === this.modalScreen.login)
 			return <LoginForm goToNewRequest={this.state.goToNewRequest} refreshHeader={() => this.renderHeaderButtons()} closeModal={() => this.setState({ modalOpened: false, goToNewRequest: false })} goToForgotPass={() => this.setState({ modalState: this.modalScreen.email })} goToSignIn={() => this.setState({ modalState: this.modalScreen.register })} />;
-		if (this.state.modalState == this.modalScreen.register)
+		if (this.state.modalState === this.modalScreen.register)
 			return <CadastroUsuario goToNewRequest={this.state.goToNewRequest} refreshHeader={() => this.renderHeaderButtons()} closeModal={() => this.setState({ modalOpened: false, goToNewRequest: false })} backToLogin={() => this.setState({ modalState: this.modalScreen.login })} />;
-		if (this.state.modalState == this.modalScreen.email)
+		if (this.state.modalState === this.modalScreen.email)
 			return <Email setRecEmail={(email) => this.setState({ recEmail: email })} closeModal={() => this.setState({ modalOpened: false })} goToRecPass={() => this.setState({ modalState: this.modalScreen.recpass })} backToLogin={() => this.setState({ modalState: this.modalScreen.login })} />;
-		if (this.state.modalState == this.modalScreen.recpass)
+		if (this.state.modalState === this.modalScreen.recpass)
 			return <RecPassword email={this.state.recEmail} closeModal={() => this.setState({ modalOpened: false })} backToLogin={() => this.setState({ modalState: this.modalScreen.login })} />;
 		return null;
 	}

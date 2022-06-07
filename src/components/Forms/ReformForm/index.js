@@ -28,7 +28,6 @@ class ReformForm extends React.Component {
 			photos: [],
 			establishmentName: '',
 			establishmentType: '',
-			establishmentName: '',
 			goal: '',
 			status: '',
 			area: '',
@@ -91,9 +90,6 @@ class ReformForm extends React.Component {
 
 
 		const submitfoto = await this.submitFotos();
-		//console.log('submitFoto', submitfoto)
-
-		console.log("ENTREI")
 		this.state.photos = submitfoto.images
 		this.state.budgetLimit = this.state.budgetLimit.replace(/\./g, '').replace(/\,/, '.').replace('R$', '')
 		this.state.area = this.state.area.replace(/[^0-9]/g, '')
@@ -234,25 +230,20 @@ class ReformForm extends React.Component {
 
 
 	handleClickOpen = () => {
-	//	console.log("He-Man")
-	//	console.log(this.state.open)
-	//	console.log(this.state.setOpen)
 		this.setState({
 			open: true
 		})
-	//	console.log(this.state.open)
 
 	}
 
 	handleClose = () => {
-	//	console.log("She-ra")
 		this.setState({
 			open: false,
 		})
 	}
 
 	show = () => {
-		const { photos, establishmentName, establishmentType, area, budgetLimit, endereco, restrictions, outros, address, reformItens } = this.state
+		const { photos, establishmentName, establishmentType, area, budgetLimit, restrictions, address, reformItens } = this.state
 		console.log('photos',photos)
 		console.log("Nome: " + establishmentName)
 		console.log("Tipo: " + establishmentType)
@@ -263,16 +254,13 @@ class ReformForm extends React.Component {
 		console.log("restrictions: " + restrictions)
 	}
 
-
-
-
 	render() {
-		const { establishmentName, establishmentType, area, budgetLimit, endereco, restrictions, errors, abreFotos, phone, reformItens, address, outros, goal } = this.state
+		const { establishmentName, establishmentType, area, budgetLimit, restrictions, errors, phone, reformItens, address, goal } = this.state
 
 		return (
 
 			<Grid container spacing={3} className="reforma-container" style={{alignItems:'center'}}>
-				<Grid item xs={12} direction="column" style={{ textAlign:"center", marginLeft:-10,marginBottom:20}}>
+				<Grid item xs={12} direction="column" style={{ color: 'white', textAlign:"center", marginLeft:-10,marginBottom:20}}>
 					<h1>{this.props.title}</h1>
 				</Grid>
 
@@ -284,7 +272,7 @@ class ReformForm extends React.Component {
 
 				<Grid item xs={3} direction="column" style={{display:"flex-end"}} className="reforma-form-inner-container">
 					<div className="reforma-form-inputs-container-top">
-						<InputLabel style={{ textAlign: 'center', fontSize: 16, color: 'black'}} htmlFor="demo-controlled-open-select">Informações Gerais</InputLabel>
+						<InputLabel style={{ textAlign: 'center', fontSize: 16, color: 'white'}} htmlFor="demo-controlled-open-select">Informações Gerais</InputLabel>
 
 						<Typography style={{ color: 'black', fontFamily: 'Playfair Display', margin: 0 }}>
 								<TextField
@@ -377,14 +365,13 @@ class ReformForm extends React.Component {
 									name="phone"
 									onChange={e => this.setState({ phone: e.target.value } )}
 									label="Celular *"
-									onChange={this.onChange}
 									error={errors.phone}
 									value={phone}
 									autoComplete="phone"
 								/>
 							</Typography>
 
-							<InputLabel style={{ textAlign: 'center', fontSize: 16, marginBottom: 10, marginTop: 50, color:'black' }} htmlFor="demo-controlled-open-select">Informações de Endereço</InputLabel>
+							<InputLabel style={{ textAlign: 'center', fontSize: 16, marginBottom: 10, marginTop: 50, color:'white' }} htmlFor="demo-controlled-open-select">Informações de Endereço</InputLabel>
 							<Typography style={{ color: 'black', fontFamily: 'Playfair Display' }}>
 								<NumberFormat
 									customInput={TextField}
@@ -503,7 +490,7 @@ class ReformForm extends React.Component {
 							<Grid item xs={12} style={{marginRight:120}}>
 
 								<Button variant="contained" onClick={(e) => this.abreFotos(e)}
-									style={{ color: 'yellow', backgroundColor: 'black', fontSize: 15, margin: 20, display: 'flex-center' }}>
+									style={{ color: 'black', backgroundColor: 'yellow', fontSize: 15, margin: 20, display: 'flex-center' }}>
 									Adicionar Fotos
 										</Button>
 							</Grid>
@@ -524,7 +511,7 @@ class ReformForm extends React.Component {
 				<Grid item xs={3} direction="column" className="reforma-form-radios-container">
 					<div>
 						<Grid item xs={12}>
-							<InputLabel style={{ margin: 20, color:'black' }} htmlFor="demo-controlled-open-select">Itens da Reforma</InputLabel>
+							<InputLabel style={{ margin: 20, color:'white' }} htmlFor="demo-controlled-open-select">Itens da Reforma</InputLabel>
 						</Grid>
 						<FormControl  style={{margin:10}} component="fieldset" className="input">
 							<FormControlLabel
@@ -608,7 +595,7 @@ class ReformForm extends React.Component {
 
 					<Grid item xs={12}>
 						<Button onClick={() => this.handleClickOpen()}
-							variant="contained" style={{ color: 'yellow', backgroundColor: 'black', fontSize: 25, margin: 20 }} >
+							variant="contained" style={{ color: 'black', backgroundColor: 'yellow', fontSize: 25, margin: 20 }} >
 							Encaminhar
 								</Button>
 					</Grid>

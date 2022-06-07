@@ -17,23 +17,6 @@ import { Search as SearchIcon } from '@material-ui/icons';
 import Modal from '../Modal/index';
 import { getUser, loggedUser } from '../../services/user/index.js';
 
-const styles = theme => ({
-    root: {
-        width: '100%',
-        maxWidth: 360,
-        backgroundColor: theme.palette.background.paper,
-    },
-    dividerFullWidth: {
-        margin: `5px 0 0 ${theme.spacing(2)}px`,
-    },
-    dividerInset: {
-        margin: `5px 0 0 ${theme.spacing(9)}px`,
-    },
-
-});
-
-
-
 const getTypes = (itens) => 
 {
     let tipos = "";
@@ -114,11 +97,6 @@ export default class ReformaDetalhe extends React.Component {
         }
     }
 
-    //async componentDidMount() {
-		//const photo = await getPhoto()
-		//this.setState({ photo })
-	//}
-
     async componentWillMount() {
         var i;
         const IMAGES=[];
@@ -138,13 +116,13 @@ export default class ReformaDetalhe extends React.Component {
     }
 
     getUsuario = async () => {
-        if (this.props.tipoUsuario == 1) {
+        if (this.props.tipoUsuario === 1) {
             var user = await loggedUser()
             this.setState({
                 user
             })
         } else {
-            var user = await getUser(this.props.reform.userId)
+            user = await getUser(this.props.reform.userId)
             this.setState({
                 user
             })
