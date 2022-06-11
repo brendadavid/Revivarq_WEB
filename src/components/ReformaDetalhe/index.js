@@ -102,8 +102,8 @@ export default class ReformaDetalhe extends React.Component {
         const IMAGES=[];
         for (i = 0; i < this.props.reform.photos.length; i++) {
             IMAGES.push({
-                src: 'http://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
-                thumbnail: 'http://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
+                src: 'https://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
+                thumbnail: 'https://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
                 thumbnailWidth: 320,
                 thumbnailHeight: 212
             });
