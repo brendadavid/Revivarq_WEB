@@ -1,7 +1,6 @@
-import axios from 'axios'
-import * as crypto from 'crypto-js'
-import { crud_user } from 'configs/api_routes'
-import { api_auth_user, api_get_user } from 'configs/api_routes'
+import axios from 'axios';
+import * as crypto from 'crypto-js';
+import { crud_user, api_auth_user, api_get_user } from 'configs/api_routes';
 import { Constants } from 'configs/constants';
 import * as querystring from 'query-string';
 

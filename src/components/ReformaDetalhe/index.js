@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import { ExpandLess as ExpandLessIcon } from '@material-ui/icons';
+import { ExpandLess as ExpandLessIcon, Search as SearchIcon } from '@material-ui/icons';
 import TextField from '@material-ui/core/TextField';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import Grid from '@material-ui/core/Grid';
@@ -13,7 +13,6 @@ import BlockIcon from '@material-ui/icons/Block';
 import BuildIcon from '@material-ui/icons/Build';
 import toMoneyConversion from 'helpers/NumberUtility';
 import Gallery from 'react-grid-gallery';
-import { Search as SearchIcon } from '@material-ui/icons';
 import Modal from '../Modal/index';
 import { getUser, loggedUser } from '../../services/user/index.js';
 

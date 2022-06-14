@@ -1,8 +1,6 @@
 import axios from 'axios'
 import { Constants } from 'configs/constants';
-import { UpdateReforms } from 'configs/api_routes'
-import { GetReforms  } from 'configs/api_routes'
-import { PostReform } from 'configs/api_routes'
+import { UpdateReforms, GetReforms, PostReform } from 'configs/api_routes';
 
 export const getReforms = async (user) => {
 
