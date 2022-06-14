@@ -36,7 +36,6 @@ export default class SwitchListSecondary extends React.Component {
 
 	async componentDidMount() {
 		const reforms = await getReforms()
-		const photos = await getPhotos()
 		this.setState({ reforms })
 	}
 
@@ -45,7 +44,6 @@ export default class SwitchListSecondary extends React.Component {
 
 	render() {
 		const classes = styles();
-		let count = 0;
 		return (
 			<div>
 				<div style={{ display: 'flex', justifyContent: 'left', marginLeft: 0, marginBottom: -60, marginTop: 30 }}>

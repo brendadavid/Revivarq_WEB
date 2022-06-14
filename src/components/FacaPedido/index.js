@@ -12,8 +12,7 @@ class FacaPedido extends React.Component {
 
 
 	render() {
-		const { display } = this.props
-		const {render} = this.state
+
 			return (
 				<div>Hello World</div> 
 			)
