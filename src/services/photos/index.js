@@ -23,12 +23,6 @@ export const postPhotos = async (photos) => {
     })
     if (response) {
         const api_response = response.data
-        //console.log('api_response', api_response)
-        //console.log('api_response', api_response)
-        //console.log('api_response', api_response)
-        //console.log('api_response', api_response)
-        //console.log('api_response', api_response)
-        //console.log('api_response', api_response)
         return api_response
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
@@ -60,24 +54,3 @@ export const getPhotos = async () => {
   }
 
 }
-
-/*export const postPhotos = async (PostPhotos, data) =>{
-    let options = {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      },
-      method: 'POST'
-    };
-  
-    options.body = new FormData();
-    for (let key in data) {
-      options.body.append(key, data[key]);
-    }
-  
-    return fetch(PostPhotos, options)
-        .then(async response => {
-          const responseJson = await response.json();
-            //You put some checks here
-            return responseJson;
-        });
-  }*/

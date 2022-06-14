@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { Constants } from 'configs/constants';
-// import * as querystring from 'querystring'
 
 import { instagramGaleria } from 'configs/api_routes'
 
