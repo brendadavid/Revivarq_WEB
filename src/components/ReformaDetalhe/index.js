@@ -107,7 +107,7 @@ export default class ReformaDetalhe extends React.Component {
                 thumbnailWidth: 320,
                 thumbnailHeight: 212
             });
-        }; 
+        } 
         this.setState({IMAGES})  
     }
 

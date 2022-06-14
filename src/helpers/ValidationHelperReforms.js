@@ -17,7 +17,7 @@ export function getReformStatusEnum() {
             STOPPED: "Parado",
             APPROVED: "Aprovado",
         }
-};
+}
 
 /**
 * Validador de status da reforma
