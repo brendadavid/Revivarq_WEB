@@ -1,15 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 
-// Serviços
-
-// Biblioteca de Componentes
-import Button from '@material-ui/core/Button'
-
-/**
- *  Recomendo substituir este Header por um header advindo de uma biblioteca de componentes
- */
-
 class FacaPedido extends React.Component {
 
 	constructor(props) {
@@ -17,11 +8,7 @@ class FacaPedido extends React.Component {
 		this.state = {
 			
 		}
-		//console.log('Show Header?', props.display)
 	}
-
-
-
 
 
 	render() {
