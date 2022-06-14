@@ -121,7 +121,7 @@ export default class ReformaDetalhe extends React.Component {
                 user
             })
         } else {
-            user = await getUser(this.props.reform.userId)
+            let user = await getUser(this.props.reform.userId)
             this.setState({
                 user
             })

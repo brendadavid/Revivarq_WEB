@@ -40,6 +40,7 @@ export default class SwitchListSecondary extends React.Component {
 	}
 
 	handleClick(reform) {
+		// Isso é intencional
 	}
 
 	render() {

@@ -12,7 +12,7 @@ export const getReforms = async (user) => {
         data:user,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${await sessionStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         }
     })
 
@@ -34,7 +34,7 @@ export const editReform = async (reform) => {
         data:reform,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${await sessionStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         }
     })
 
@@ -72,7 +72,7 @@ export const editReform = async (reform) => {
     
 export const postReform = async (reform) => {
 
-    let userID = await sessionStorage.getItem("id");
+    let userID = sessionStorage.getItem("id");
 
     reform.userId = userID;
 
@@ -85,7 +85,7 @@ export const postReform = async (reform) => {
         data:reform,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${await sessionStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         }
     })
 

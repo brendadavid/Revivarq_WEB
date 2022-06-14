@@ -84,7 +84,7 @@ export const loggedUser = async () => {
         timeout: 5000,
         headers: { 
 			'Content-Type': 'application/json',
-			'Authorization': `Bearer ${ await sessionStorage.getItem('token')}`
+			'Authorization': `Bearer ${ sessionStorage.getItem('token')}`
         }
     })
 
@@ -159,7 +159,7 @@ export const getUser = async (id) => {
         params: { id },
         headers: { 
 			'Content-Type': 'application/json',
-			'Authorization': `Bearer ${ await sessionStorage.getItem('token')}`
+			'Authorization': `Bearer ${ sessionStorage.getItem('token')}`
         }
     })
     if(response) {
