@@ -4,7 +4,6 @@ import './styles.css'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 
-// import {show_stringify} from 'helpers/json'
 
 import { create, read, update } from 'services/user'
 
@@ -231,7 +230,6 @@ class UserForm extends React.Component {
 
 					{this.renderSubmitButton()}
 				</form>
-				{/* {show_stringify(this.state)} */}
 			</div>
 		)
 	}

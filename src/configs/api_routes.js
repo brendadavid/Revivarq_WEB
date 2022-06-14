@@ -31,8 +31,6 @@ export const crud_user = {
 }
 
 // Reforms
-//export const api_get_reforms_id	 		=                   { method: 'get', url: `${api}/reform/id` }
-
 export const api_get_reforms			= ()	=> {return { method: 'get', url: `${api}/reform`} }
 
 export const GetReforms = {

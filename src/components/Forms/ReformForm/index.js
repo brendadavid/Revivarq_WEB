@@ -156,11 +156,8 @@ class ReformForm extends React.Component {
 	}
 
 	imgChange = (e) => {
-	//	console.log("ThunderCats")
 		let reader = new FileReader();
 		let file = e.target.files[0];
-	//	console.log("FILE",file)
-	//	console.log("READER",reader)
 		reader.onloadend = () => {
 
 			var aux = this.state.file;

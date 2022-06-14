@@ -62,7 +62,6 @@ export default class SwitchListSecondary extends React.Component {
 
 		const user = await loggedUser()
 		this.setState({ user, isLoading: false })
-		//const user = await read()
 	}
 
 

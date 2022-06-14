@@ -115,7 +115,6 @@ class LoginForm extends React.Component {
 						disabled={isLoading}
 					>Cadastrar</Button>
 				</form>
-				{/* {show_stringify('Login Form State', this.state, 'login_state')} */}
 			</div>
 		)
 	}
