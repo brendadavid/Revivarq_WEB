@@ -1,5 +1,5 @@
-var env       = process.env.NODE_ENV || 'development'
-var environment    = require('./config.json')[env]
+const env       = process.env.NODE_ENV || 'development'
+const environment    = require('./config.json')[env]
 
 console.log(process.env.NODE_ENV )
 

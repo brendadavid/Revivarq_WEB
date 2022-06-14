@@ -135,7 +135,7 @@ export default class SwitchListSecondary extends React.Component {
 	}
 
 	trocaBotao(e) {
-		var estado = this.state.trocaBotao
+		const estado = this.state.trocaBotao
 		if (estado) {
 			this.setState({
 				trocaBotao: false,
@@ -153,7 +153,7 @@ export default class SwitchListSecondary extends React.Component {
 	}
 
 	abreEdicao(e) {
-		var estado = this.state.disabled
+		const estado = this.state.disabled
 		if (estado) {
 			this.setState({
 				abreEdicao: false,

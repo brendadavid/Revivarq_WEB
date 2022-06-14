@@ -37,8 +37,8 @@ export const postPhotos = async (photos) => {
 }
 
 export const getPhotos = async () => {
-  var param= '?file='
-  var image = 'avatar-157409410385791.jpeg'
+  const param= '?file='
+  const image = 'avatar-157409410385791.jpeg'
   let route = GetPhotos;
   const response = await axios({
       method: 'get',

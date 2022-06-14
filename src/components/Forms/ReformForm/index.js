@@ -160,11 +160,11 @@ class ReformForm extends React.Component {
 		let file = e.target.files[0];
 		reader.onloadend = () => {
 
-			var aux = this.state.file;
-			var aux2 = this.state.imagePreviewUrl;
-			var aux3 = this.state.imgPost;
+			const aux = this.state.file;
+			const aux2 = this.state.imagePreviewUrl;
+			const aux3 = this.state.imgPost;
 
-			var imgPre = { nome: file.name, foto: reader.result }
+			const imgPre = { nome: file.name, foto: reader.result }
 			aux.push(file)
 			aux2.push(imgPre)
 			aux3.push(reader.result)
@@ -186,7 +186,7 @@ class ReformForm extends React.Component {
 
 
 	abreFotos(e) {
-		var estado = this.state.abreFotos
+		const estado = this.state.abreFotos
 		if (estado) {
 			this.setState({
 				abreFotos: false

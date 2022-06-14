@@ -57,7 +57,7 @@ class Header extends React.Component {
 	}
 
 	verificaAdmin = async () => {
-		var response = await sessionStorage.getItem("isAdmin");
+		const response = sessionStorage.getItem("isAdmin");
 		return response;
 	}
 

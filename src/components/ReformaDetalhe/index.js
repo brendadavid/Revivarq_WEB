@@ -97,7 +97,7 @@ export default class ReformaDetalhe extends React.Component {
     }
 
     async componentWillMount() {
-        var i;
+        let i;
         const IMAGES=[];
         for (i = 0; i < this.props.reform.photos.length; i++) {
             IMAGES.push({
@@ -116,7 +116,7 @@ export default class ReformaDetalhe extends React.Component {
 
     getUsuario = async () => {
         if (this.props.tipoUsuario === 1) {
-            var user = await loggedUser()
+            let user = await loggedUser()
             this.setState({
                 user
             })
