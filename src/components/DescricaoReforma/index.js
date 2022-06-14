@@ -9,7 +9,7 @@ import { getReforms } from '../../services/reforms/index.js';
 import { getPhotos} from '../../services/photos/index.js';
 import Typography from '@material-ui/core/Typography';
 
-const styles = theme => ({
+const styles = _theme => ({
 	root: {
 		width: '100%',
 		marginTop: 100,
@@ -39,7 +39,7 @@ export default class SwitchListSecondary extends React.Component {
 		this.setState({ reforms })
 	}
 
-	handleClick(reform) {
+	handleClick(_reform) {
 		// Isso é intencional
 	}
 
@@ -79,7 +79,7 @@ export default class SwitchListSecondary extends React.Component {
 												variant="contained"
 												color="primary"
 												className={classes.button}
-												endIcon={<Icon>send</Icon>} onClick={(e) => this.handleClick(reform)}>
+												endIcon={<Icon>send</Icon>} onClick={(_e) => this.handleClick(reform)}>
 												
 												</Button> </TableCell>
 									</TableRow>

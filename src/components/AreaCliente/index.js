@@ -20,7 +20,7 @@ import { update } from '../../services/user/index.js';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 
-const styles = theme => ({
+const styles = _theme => ({
 	root: {
 		width: '100%',
 		marginTop: 100,
@@ -121,8 +121,8 @@ export default class SwitchListSecondary extends React.Component {
 				<TableCell align="right">R$ {toMoneyConversion(reform.budgetLimit)}</TableCell>
 				<TableCell align="right">{reform.establishmentName}</TableCell>
 				<TableCell align="right">{reform.status}</TableCell>
-				<TableCell align="right"><SearchIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.setState({ openedReformIndex: index })} /></TableCell>
-				<TableCell align="right" style={{borderBottomRightRadius:"15px"}}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
+				<TableCell align="right"><SearchIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(_e) => this.setState({ openedReformIndex: index })} /></TableCell>
+				<TableCell align="right" style={{borderBottomRightRadius:"15px"}}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(_e) => this.handleClick(reform)} /></TableCell>
 			</TableRow>
 		)
 	}
@@ -134,7 +134,7 @@ export default class SwitchListSecondary extends React.Component {
 		})
 	}
 
-	trocaBotao(e) {
+	trocaBotao(_e) {
 		const estado = this.state.trocaBotao
 		if (estado) {
 			this.setState({
@@ -152,7 +152,7 @@ export default class SwitchListSecondary extends React.Component {
 		}
 	}
 
-	abreEdicao(e) {
+	abreEdicao(_e) {
 		const estado = this.state.disabled
 		if (estado) {
 			this.setState({

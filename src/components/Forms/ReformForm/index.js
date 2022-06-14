@@ -185,7 +185,7 @@ class ReformForm extends React.Component {
 	}
 
 
-	abreFotos(e) {
+	abreFotos(_e) {
 		const estado = this.state.abreFotos
 		if (estado) {
 			this.setState({
@@ -497,7 +497,7 @@ class ReformForm extends React.Component {
 								this.state.imagePreviewUrl.map((foto) => {
 									return <div>
 										<img src={foto.foto} style={{ width: 70, height: 70, display: 'flex-center', margin: 20 }}></img>
-										<Button variant="contained" style={{ color: 'black', backgroundColor: "rgb(21,38,32)", display: "flex-center", marginBottom: 80 }} onClick={(e) => this.deletarImg(foto)}>Remover</Button>
+										<Button variant="contained" style={{ color: 'black', backgroundColor: "rgb(21,38,32)", display: "flex-center", marginBottom: 80 }} onClick={(_e) => this.deletarImg(foto)}>Remover</Button>
 									</div>
 								})
 							}

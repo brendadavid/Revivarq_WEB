@@ -16,7 +16,7 @@ import { Constants } from '../../configs/constants';
 import { Search as SearchIcon } from '@material-ui/icons';
 import ReformaDetalhe from '../ReformaDetalhe';
 
-const styles = theme => ({
+const styles = _theme => ({
 	root: {
 		width: '100%',
 		marginTop: 100,
