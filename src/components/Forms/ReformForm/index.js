@@ -75,12 +75,11 @@ class ReformForm extends React.Component {
 
 
 	async registrarReforma(reform) {
-		return await postReform(reform, false)
+		return postReform(reform, false)
 	}
 
 	async submitFotos(){ 
 		const fotoAttempt = await postPhotos(this.state.file);
-		//console.log('fotoAtt',fotoAttempt)
 		return fotoAttempt;
 	}
 

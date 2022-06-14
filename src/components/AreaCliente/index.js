@@ -78,7 +78,7 @@ export default class SwitchListSecondary extends React.Component {
 	}
 
 	async updateUsers(editUser) {
-		return await update(editUser)
+		return update(editUser)
 	}
 
 	handleSubmit = async event => {

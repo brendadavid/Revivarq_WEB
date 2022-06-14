@@ -14,7 +14,7 @@ class Reforma extends Page {
 
 	//chama para api para editar a solicitação reforma...
 	async editarReforma(reform) {
-		return await editReform(reform, false)
+		return editReform(reform, false)
 	}
 
 	authenticated = () => {

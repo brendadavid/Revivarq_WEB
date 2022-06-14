@@ -13,7 +13,7 @@ import { create } from 'services/user'
 class CadastroPage extends Page {
 
 	async registrarUsuario(usuario) {
-		return await create(usuario, false)
+		return create(usuario, false)
 	}
 
 	authenticated = () => {
