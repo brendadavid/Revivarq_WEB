@@ -24,10 +24,10 @@ export const create = async (user, encryptPassword) => {
     })
     console.log(response)
     if(response) {
-        const api_response = response.data
+        let api_response = response.data
         if(api_response && api_response.statusCode === Constants.successCode) {
             let token
-            const api_response = response.data
+            api_response = response.data
             const responseData = api_response.data
             let id
             if(responseData) {
