@@ -79,8 +79,8 @@ class ReformForm extends React.Component {
 	}
 
 	async submitFotos(){ 
-		const fotoAttempt = await postPhotos(this.state.file);
-		return fotoAttempt;
+		return postPhotos(this.state.file);
+		
 	}
 
 

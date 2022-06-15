@@ -22,8 +22,7 @@ export const postPhotos = async (photos) => {
         } 
     })
     if (response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }

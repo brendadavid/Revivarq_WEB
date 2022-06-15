@@ -72,8 +72,8 @@ export const validToken = async() => {
 
     if(response) {
         const responseData = response.data
-        const isAuthenticated = responseData.data
-        return isAuthenticated
+        return responseData.data
+        
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }
@@ -94,8 +94,7 @@ export const genPassCode = async (data) => {
     })
 
     if (response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }
@@ -115,8 +114,7 @@ export const genNewPassword = async (data) => {
     })
 
     if (response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }

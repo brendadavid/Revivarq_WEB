@@ -17,8 +17,7 @@ export const getReforms = async (user) => {
     })
 
     if (response) {
-        const api_response = response.data.data
-        return api_response
+        return response.data.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }
@@ -39,8 +38,7 @@ export const editReform = async (reform) => {
     })
 
     if (response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }
@@ -66,8 +64,7 @@ export const postReform = async (reform) => {
     })
 
     if (response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }

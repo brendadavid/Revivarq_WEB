@@ -19,8 +19,7 @@ class AreaAdmin extends Page {
 
 
 	verificaAdmin = async () => {
-		const response = sessionStorage.getItem("isAdmin");
-		return response;
+		return sessionStorage.getItem("isAdmin");
 	}
 
 	renderAdmin = async () => {
