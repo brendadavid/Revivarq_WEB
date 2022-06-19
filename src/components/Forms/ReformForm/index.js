@@ -91,7 +91,7 @@ class ReformForm extends React.Component {
 		const submitfoto = await this.submitFotos();
 		this.state.photos = submitfoto.images
 		this.state.budgetLimit = this.state.budgetLimit.replace(/\./g, '').replace(/\,/, '.').replace('R$', '')
-		this.state.area = this.state.area.replace(/[^0-9]/g, '')
+		this.state.area = this.state.area.replace(/\D/g, '')
 		this.state.address.cep = this.state.address.cep.replace(/\-/g, '')
 		this.state.phone = this.state.phone.replace(/\_/, '')
 
