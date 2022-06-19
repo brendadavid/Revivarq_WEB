@@ -11,7 +11,7 @@ import Divider from '@material-ui/core/Divider';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import BlockIcon from '@material-ui/icons/Block';
 import BuildIcon from '@material-ui/icons/Build';
-import toMoneyConversion from 'helpers/NumberUtility';
+import toMoneyConversion from 'helpers/ToMoneyConversion';
 import Gallery from 'react-grid-gallery';
 import Modal from '../Modal/index';
 import { getUser, loggedUser } from '../../services/user/index.js';

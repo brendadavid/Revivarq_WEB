@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { getReforms } from '../../services/reforms/index.js';
 import Typography from '@material-ui/core/Typography';
-import toMoneyConversion from 'helpers/NumberUtility';
+import toMoneyConversion from 'helpers/ToMoneyConversion';
 import { editReform } from '../../services/reforms/index';
 import { showNotification } from 'components/Notification';
 import { Constants } from '../../configs/constants';
