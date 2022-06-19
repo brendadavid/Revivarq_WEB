@@ -26,7 +26,6 @@ export const login = async (email, password, encrypt_password) => {
         let token
         let isAdmin
         let id
-        let user
         const api_response = response.data
         const responseData = api_response.data
 
@@ -34,7 +33,6 @@ export const login = async (email, password, encrypt_password) => {
             token = api_response.data.token
             isAdmin = api_response.data.userData.isAdmin
             id = api_response.data.userData.id
-            user = api_response.data.userData
         }
 
         if(token) {
