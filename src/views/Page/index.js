@@ -54,9 +54,8 @@ class Page extends React.Component {
     isAdmin = () => {
         if (sessionStorage.getItem("isAdmin")) {
             return true;
-        } else {
-            return false;
-        }
+        } 
+            return false;       
     }
 
     /*
