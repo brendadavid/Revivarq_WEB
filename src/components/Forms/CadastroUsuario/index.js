@@ -24,7 +24,7 @@ class CadastroUsuario extends React.Component {
 	}
 
 	async registrarUsuario(usuario) {
-		return await create(usuario, false)
+		return create(usuario, false)
 	}
 
 	validName(name) {
