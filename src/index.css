@@ -15,4 +15,34 @@ body {
 .MuiInput-root-188 {
   color: white !important;
 }
-
+.MuiButtonBase-root-267 MuiIconButton-root-454 MuiSwitchBase-root-450 MuiCheckbox-root-445{
+  color: white !important;
+}
+.MuiFormLabel-root-152 MuiInputLabel-root-147 MuiInputLabel-formControl-148 MuiInputLabel-animated-151{
+  color: white !important;
+}
+.MuiFormLabel-root-152.MuiFormLabel-focused-153{
+  color: white !important;
+}
+.MuiInput-input-196{
+  color: white !important;
+}
+.MuiFormLabel-root-152 MuiFormLabel-filled-156 MuiInputLabel-root-147 MuiInputLabel-formControl-148 MuiInputLabel-animated-151 MuiInputLabel-shrink-150{
+  color: white !important;
+}
+.MuiFormLabel-root-152 MuiInputLabel-root-147 MuiInputLabel-formControl-148 MuiInputLabel-animated-151{
+  color: white !important;
+}
+.MuiFormLabel-root-152{
+  color: white !important;
+}
+.MuiInput-underline-192:before{
+  left: 0;
+    right: 0;
+    bottom: 0;
+    content: "\00a0";
+    position: absolute;
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid white !important;
+    pointer-events: none;
+}
