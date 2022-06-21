@@ -180,6 +180,17 @@ class Header extends React.Component {
 		}
 	}
 
+	redirectNovaFuncionalidade = async () => {
+		const isAuthenticated = await validToken()
+
+		if (isAuthenticated)
+			this.redirect('/NovaFuncionalidade')
+		else {
+			this.setState({ modalState: this.modalScreen.login, modalOpened: true, goToNewRequest: true })
+			showNotification('Para poder entrar na nova área, primeiro realize seu login no RevivArq', '', 'warning')
+		}
+	}
+
 	render() {
 		const { display } = this.props
 		const { render, modalOpened, botaoSair, userName, isAdmin } = this.state
@@ -202,6 +213,13 @@ class Header extends React.Component {
 						className="btn"
 						onClick={() => { this.redirect('/') }}
 					>Início</Button>
+
+					<Button
+						style={{ fontFamily: 'Playfair Display' }}
+						id="botaoAbout"
+						className="btn"
+						onClick={() => { this.redirectNovaFuncionalidade() }}
+					>Nova Funcionalidade</Button>
 
 					{(!isAdmin || isAdmin === "false") && <Button
 						style={{ fontFamily: 'Playfair Display' }}

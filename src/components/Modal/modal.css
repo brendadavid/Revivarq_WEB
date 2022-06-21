@@ -9,7 +9,7 @@
 }
 
 .dialog-title {
-    color: 'rgb(21,38,32)';
+    color: black !important;
     font-size: 24px;
     font-style: normal;
     font-stretch: normal;

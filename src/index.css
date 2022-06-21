@@ -46,3 +46,6 @@ body {
     border-bottom: 1px solid white !important;
     pointer-events: none;
 }
+.show{
+  display: block !important;
+}

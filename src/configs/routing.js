@@ -13,6 +13,7 @@ import AreaAdmin from '../views/AreaAdmin'
 import AreaCliente from '../views/AreaCliente'
 import SobreNos from '../views/SobreNos'
 import FacaPedido from '../views/FacaPedido'
+import NovaFuncionalidade from '../views/NovaFuncionalidade'
 import Reforma from '../views/Reforma'
 // Users
 import UserEditPage from 'views/UserPages/CreateUpdate'
@@ -30,6 +31,7 @@ export default () => {
 				<Route path= '/AreaCliente' component={AreaCliente}/>
 				<Route path= '/SobreNos' component={SobreNos}/>
 				<Route path= '/FacaPedido' component={FacaPedido}/>
+				<Route path= '/NovaFuncionalidade' component={NovaFuncionalidade}/>
 				<Route path= '/Reforma' component={Reforma}/>
 				<Route path= '/Erro403' component={Erro403}/>
 
