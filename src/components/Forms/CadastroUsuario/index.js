@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button'
 import { Constants } from '../../../configs/constants' 
 import { create } from 'services/user'
 import { showNotification } from 'components/Notification';
+import * as EmailValidator from 'email-validator';
 
 class CadastroUsuario extends React.Component {
 	constructor(props) {
@@ -23,7 +24,7 @@ class CadastroUsuario extends React.Component {
 	}
 
 	async registrarUsuario(usuario) {
-		return await create(usuario, false)
+		return create(usuario, false)
 	}
 
 	validName(name) {
@@ -35,7 +36,9 @@ class CadastroUsuario extends React.Component {
 	}
 
 	validEmail(email){
-		return (!!email && email.length > 0 && email.length <= 50)
+  
+		return EmailValidator.validate(email);	 
+                                                                          
 	} 
 	validPassword(password) {
 		return (!!password && password.length >= 6 && password.length <= 11)

@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { getReforms, getReformById } from '../../services/reforms/index.js';
-import { getPhotos} from '../../services/photos/index.js';
+import { getReforms } from '../../services/reforms/index.js';
 import Typography from '@material-ui/core/Typography';
 
-const styles = theme => ({
+const styles = _theme => ({
 	root: {
 		width: '100%',
 		marginTop: 100,
@@ -37,22 +35,15 @@ export default class SwitchListSecondary extends React.Component {
 
 	async componentDidMount() {
 		const reforms = await getReforms()
-		//console.log(reforms.photos)
-		const photos = await getPhotos()
-		//console.log('getPhotos',photos)
-		//const reform = await getReformById('5d92891f916da312a457a0f1')
 		this.setState({ reforms })
-		//console.log("reformas: ", reforms);
 	}
 
-
-	handleClick(reform) {
-		//console.log('this is:', getReformById(reform.id));
+	handleClick(_reform) {
+		// Isso é intencional
 	}
 
 	render() {
 		const classes = styles();
-		let count = 0;
 		return (
 			<div>
 				<div style={{ display: 'flex', justifyContent: 'left', marginLeft: 0, marginBottom: -60, marginTop: 30 }}>
@@ -87,7 +78,7 @@ export default class SwitchListSecondary extends React.Component {
 												variant="contained"
 												color="primary"
 												className={classes.button}
-												endIcon={<Icon>send</Icon>} onClick={(e) => this.handleClick(reform)}>
+												endIcon={<Icon>send</Icon>} onClick={(_e) => this.handleClick(reform)}>
 												
 												</Button> </TableCell>
 									</TableRow>

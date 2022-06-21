@@ -1,7 +1,6 @@
-import axios from 'axios'
-import * as crypto from 'crypto-js'
-import { crud_user } from 'configs/api_routes'
-import { api_auth_user, api_get_user } from 'configs/api_routes'
+import axios from 'axios';
+import * as crypto from 'crypto-js';
+import { crud_user, api_auth_user, api_get_user } from 'configs/api_routes';
 import { Constants } from 'configs/constants';
 import * as querystring from 'query-string';
 
@@ -25,10 +24,10 @@ export const create = async (user, encryptPassword) => {
     })
     console.log(response)
     if(response) {
-        const api_response = response.data
+        let api_response = response.data
         if(api_response && api_response.statusCode === Constants.successCode) {
             let token
-            const api_response = response.data
+            api_response = response.data
             const responseData = api_response.data
             let id
             if(responseData) {
@@ -85,7 +84,7 @@ export const loggedUser = async () => {
         timeout: 5000,
         headers: { 
 			'Content-Type': 'application/json',
-			'Authorization': `Bearer ${ await sessionStorage.getItem('token')}`
+			'Authorization': `Bearer ${ sessionStorage.getItem('token')}`
         }
     })
 
@@ -143,8 +142,7 @@ export const list = async (contains, sort, isAscending) => {
     })
 
     if(response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }
@@ -160,7 +158,7 @@ export const getUser = async (id) => {
         params: { id },
         headers: { 
 			'Content-Type': 'application/json',
-			'Authorization': `Bearer ${ await sessionStorage.getItem('token')}`
+			'Authorization': `Bearer ${ sessionStorage.getItem('token')}`
         }
     })
     if(response) {

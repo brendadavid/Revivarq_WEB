@@ -57,8 +57,7 @@ class Header extends React.Component {
 	}
 
 	verificaAdmin = async () => {
-		var response = await sessionStorage.getItem("isAdmin");
-		return response;
+		return sessionStorage.getItem("isAdmin");
 	}
 
 	redirect = (path) => {
@@ -113,7 +112,7 @@ class Header extends React.Component {
 	renderHeaderButtons = async () => {
 		try {
 			const isAuthenticated = await validToken()
-			await this.validAdmin()
+			this.validAdmin()
 			const admin = this.state.isAdmin;
 
 			if (!isAuthenticated) {

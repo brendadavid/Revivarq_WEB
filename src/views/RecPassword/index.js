@@ -122,7 +122,6 @@ class RecPass extends React.Component {
 					>Alterar senha</Button>
 					<br />
 				</form>
-				{/* {show_stringify('Login Form State', this.state, 'login_state')} */}
 			</div>
 		)
 	}

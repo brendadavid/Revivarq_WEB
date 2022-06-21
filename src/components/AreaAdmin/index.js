@@ -9,14 +9,14 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { getReforms } from '../../services/reforms/index.js';
 import Typography from '@material-ui/core/Typography';
-import toMoneyConversion from 'helpers/NumberUtility';
+import toMoneyConversion from 'helpers/ToMoneyConversion';
 import { editReform } from '../../services/reforms/index';
 import { showNotification } from 'components/Notification';
 import { Constants } from '../../configs/constants';
 import { Search as SearchIcon } from '@material-ui/icons';
 import ReformaDetalhe from '../ReformaDetalhe';
 
-const styles = theme => ({
+const styles = _theme => ({
 	root: {
 		width: '100%',
 		marginTop: 100,

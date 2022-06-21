@@ -14,7 +14,7 @@ import { Button } from '@material-ui/core';
 
 // Serviços
 
-const styles = theme => ({
+const styles = _theme => ({
 	root: {
 		display: 'flex',
 

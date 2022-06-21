@@ -1,13 +1,5 @@
 import React from 'react';
-import './styles.css';
 import { withRouter } from 'react-router-dom'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
-import { Constants } from '../../../configs/constants'
-import { InputLabel, Checkbox, FormControlLabel, FormControl } from '@material-ui/core';
-import { bool } from 'prop-types';
-import { editReform } from '../../../services/reforms/index';
-import { showNotification } from 'components/Notification';
 
 export default class UserEditForm extends React.Component {
     constructor(props) {

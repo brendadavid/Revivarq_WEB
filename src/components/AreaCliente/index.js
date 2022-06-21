@@ -5,7 +5,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import { Constants } from '../../configs/constants';
 import TableRow from '@material-ui/core/TableRow';
-import { Edit as EditIcon } from '@material-ui/icons';
+import { Edit as EditIcon, Search as SearchIcon } from '@material-ui/icons';
 import { showNotification } from 'components/Notification';
 import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper';
@@ -13,15 +13,14 @@ import { getReforms } from '../../services/reforms/index.js';
 import { loggedUser } from '../../services/user/index';
 import Typography from '@material-ui/core/Typography';
 import ReformaDetalhe from '../ReformaDetalhe/index.js';
-import toMoneyConversion from 'helpers/NumberUtility';
-import { Search as SearchIcon } from '@material-ui/icons';
+import toMoneyConversion from 'helpers/ToMoneyConversion';
 import BlockIcon from '@material-ui/icons/Block';
 import { Button } from '@material-ui/core';
 import { update } from '../../services/user/index.js';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 
-const styles = theme => ({
+const styles = _theme => ({
 	root: {
 		width: '100%',
 		marginTop: 100,
@@ -62,7 +61,6 @@ export default class SwitchListSecondary extends React.Component {
 
 		const user = await loggedUser()
 		this.setState({ user, isLoading: false })
-		//const user = await read()
 	}
 
 
@@ -80,7 +78,7 @@ export default class SwitchListSecondary extends React.Component {
 	}
 
 	async updateUsers(editUser) {
-		return await update(editUser)
+		return update(editUser)
 	}
 
 	handleSubmit = async event => {
@@ -123,8 +121,8 @@ export default class SwitchListSecondary extends React.Component {
 				<TableCell align="right">R$ {toMoneyConversion(reform.budgetLimit)}</TableCell>
 				<TableCell align="right">{reform.establishmentName}</TableCell>
 				<TableCell align="right">{reform.status}</TableCell>
-				<TableCell align="right"><SearchIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.setState({ openedReformIndex: index })} /></TableCell>
-				<TableCell align="right" style={{borderBottomRightRadius:"15px"}}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
+				<TableCell align="right"><SearchIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(_e) => this.setState({ openedReformIndex: index })} /></TableCell>
+				<TableCell align="right" style={{borderBottomRightRadius:"15px"}}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(_e) => this.handleClick(reform)} /></TableCell>
 			</TableRow>
 		)
 	}
@@ -136,8 +134,8 @@ export default class SwitchListSecondary extends React.Component {
 		})
 	}
 
-	trocaBotao(e) {
-		var estado = this.state.trocaBotao
+	trocaBotao(_e) {
+		const estado = this.state.trocaBotao
 		if (estado) {
 			this.setState({
 				trocaBotao: false,
@@ -154,8 +152,8 @@ export default class SwitchListSecondary extends React.Component {
 		}
 	}
 
-	abreEdicao(e) {
-		var estado = this.state.disabled
+	abreEdicao(_e) {
+		const estado = this.state.disabled
 		if (estado) {
 			this.setState({
 				abreEdicao: false,

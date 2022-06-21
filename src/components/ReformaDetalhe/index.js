@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import { ExpandLess as ExpandLessIcon } from '@material-ui/icons';
+import { ExpandLess as ExpandLessIcon, Search as SearchIcon } from '@material-ui/icons';
 import TextField from '@material-ui/core/TextField';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import Grid from '@material-ui/core/Grid';
@@ -11,9 +11,8 @@ import Divider from '@material-ui/core/Divider';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import BlockIcon from '@material-ui/icons/Block';
 import BuildIcon from '@material-ui/icons/Build';
-import toMoneyConversion from 'helpers/NumberUtility';
+import toMoneyConversion from 'helpers/ToMoneyConversion';
 import Gallery from 'react-grid-gallery';
-import { Search as SearchIcon } from '@material-ui/icons';
 import Modal from '../Modal/index';
 import { getUser, loggedUser } from '../../services/user/index.js';
 
@@ -98,16 +97,16 @@ export default class ReformaDetalhe extends React.Component {
     }
 
     async componentWillMount() {
-        var i;
+        let i;
         const IMAGES=[];
         for (i = 0; i < this.props.reform.photos.length; i++) {
             IMAGES.push({
-                src: 'http://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
-                thumbnail: 'http://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
+                src: 'https://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
+                thumbnail: 'https://www.hml.ages.pucrs.br:4501/api/photos/image?file=' + this.props.reform.photos[i],
                 thumbnailWidth: 320,
                 thumbnailHeight: 212
             });
-        }; 
+        } 
         this.setState({IMAGES})  
     }
 
@@ -117,12 +116,12 @@ export default class ReformaDetalhe extends React.Component {
 
     getUsuario = async () => {
         if (this.props.tipoUsuario === 1) {
-            var user = await loggedUser()
+            let user = await loggedUser()
             this.setState({
                 user
             })
         } else {
-            user = await getUser(this.props.reform.userId)
+            let user = await getUser(this.props.reform.userId)
             this.setState({
                 user
             })

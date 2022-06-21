@@ -1,8 +1,6 @@
 import axios from 'axios'
 import { Constants } from 'configs/constants';
-import { UpdateReforms } from 'configs/api_routes'
-import { GetReforms  } from 'configs/api_routes'
-import { PostReform } from 'configs/api_routes'
+import { UpdateReforms, GetReforms, PostReform } from 'configs/api_routes';
 
 export const getReforms = async (user) => {
 
@@ -14,13 +12,12 @@ export const getReforms = async (user) => {
         data:user,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${await sessionStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         }
     })
 
     if (response) {
-        const api_response = response.data.data
-        return api_response
+        return response.data.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }
@@ -36,45 +33,20 @@ export const editReform = async (reform) => {
         data:reform,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${await sessionStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         }
     })
 
     if (response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }
 }
 
-/* export const postPhotos = async (file) =>{
-
-    let route = PostPhotos;
-
-    const response = await axios({
-        method: 'post',
-        url: route.url,
-        timeout: 5000,
-        data:reform,
-        body: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${await sessionStorage.getItem("file")}`
-        }
-    })
-
-    if (response) {
-        const api_response = response.data
-        return api_response
-    } else {
-        return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
-    }
-
-} */
-    
 export const postReform = async (reform) => {
 
-    let userID = await sessionStorage.getItem("id");
+    let userID = sessionStorage.getItem("id");
 
     reform.userId = userID;
 
@@ -87,13 +59,12 @@ export const postReform = async (reform) => {
         data:reform,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${await sessionStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         }
     })
 
     if (response) {
-        const api_response = response.data
-        return api_response
+        return response.data
     } else {
         return { statusDesc: 'Erro obtendo resposta do servidor.', statusCode: Constants.InternalServerError }
     }

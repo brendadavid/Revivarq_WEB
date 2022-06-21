@@ -83,7 +83,6 @@ class Email extends React.Component { // Uma das varias maneiras de proteger uma
 					<br />
 
 				</form>
-				{/* {show_stringify('Login Form State', this.state, 'login_state')} */}
 			</div>
 		)
 	}

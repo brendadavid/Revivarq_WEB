@@ -75,13 +75,12 @@ class ReformForm extends React.Component {
 
 
 	async registrarReforma(reform) {
-		return await postReform(reform, false)
+		return postReform(reform, false)
 	}
 
 	async submitFotos(){ 
-		const fotoAttempt = await postPhotos(this.state.file);
-		//console.log('fotoAtt',fotoAttempt)
-		return fotoAttempt;
+		return postPhotos(this.state.file);
+		
 	}
 
 
@@ -92,7 +91,7 @@ class ReformForm extends React.Component {
 		const submitfoto = await this.submitFotos();
 		this.state.photos = submitfoto.images
 		this.state.budgetLimit = this.state.budgetLimit.replace(/\./g, '').replace(/\,/, '.').replace('R$', '')
-		this.state.area = this.state.area.replace(/[^0-9]/g, '')
+		this.state.area = this.state.area.replace(/\D/g, '')
 		this.state.address.cep = this.state.address.cep.replace(/\-/g, '')
 		this.state.phone = this.state.phone.replace(/\_/, '')
 
@@ -156,18 +155,15 @@ class ReformForm extends React.Component {
 	}
 
 	imgChange = (e) => {
-	//	console.log("ThunderCats")
 		let reader = new FileReader();
 		let file = e.target.files[0];
-	//	console.log("FILE",file)
-	//	console.log("READER",reader)
 		reader.onloadend = () => {
 
-			var aux = this.state.file;
-			var aux2 = this.state.imagePreviewUrl;
-			var aux3 = this.state.imgPost;
+			const aux = this.state.file;
+			const aux2 = this.state.imagePreviewUrl;
+			const aux3 = this.state.imgPost;
 
-			var imgPre = { nome: file.name, foto: reader.result }
+			const imgPre = { nome: file.name, foto: reader.result }
 			aux.push(file)
 			aux2.push(imgPre)
 			aux3.push(reader.result)
@@ -188,8 +184,8 @@ class ReformForm extends React.Component {
 	}
 
 
-	abreFotos(e) {
-		var estado = this.state.abreFotos
+	abreFotos(_e) {
+		const estado = this.state.abreFotos
 		if (estado) {
 			this.setState({
 				abreFotos: false
@@ -500,7 +496,7 @@ class ReformForm extends React.Component {
 								this.state.imagePreviewUrl.map((foto) => {
 									return <div>
 										<img src={foto.foto} style={{ width: 70, height: 70, display: 'flex-center', margin: 20 }}></img>
-										<Button variant="contained" style={{ color: 'black', backgroundColor: "rgb(21,38,32)", display: "flex-center", marginBottom: 80 }} onClick={(e) => this.deletarImg(foto)}>Remover</Button>
+										<Button variant="contained" style={{ color: 'black', backgroundColor: "rgb(21,38,32)", display: "flex-center", marginBottom: 80 }} onClick={(_e) => this.deletarImg(foto)}>Remover</Button>
 									</div>
 								})
 							}

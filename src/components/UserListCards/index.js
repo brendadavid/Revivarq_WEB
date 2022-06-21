@@ -2,8 +2,6 @@ import React from 'react'
 import './styles.css'
 import { withRouter  } from 'react-router-dom'
 
-// Helpers
-// import {show_stringify} from 'helpers/json'
 
 // Component Library
 import Card from '@material-ui/core/Card'
@@ -87,7 +85,6 @@ class UserListCards extends React.Component {
 					<div className="cards-container">
 						{render}
 					</div>
-					{/* {show_stringify('State', this.state, 1)} */}
 				</div>
 			)
 		} else {
